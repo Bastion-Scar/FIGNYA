@@ -1,0 +1,32 @@
+{}
+{"level":"info","time":"2025-06-09T11:31:30+05:00","caller":"awesomeProject2/main.go:72","message":"Starting server"}
+{"level":"debug","time":"2025-06-09T11:31:35+05:00","caller":"awesomeProject2/main.go:49","message":"Request","ip":"::1","method":"GET","path":"/test","query":"auth=Ivan"}
+{"level":"info","time":"2025-06-09T11:31:35+05:00","caller":"awesomeProject2/main.go:65","message":"Authorized"}
+{"level":"info","time":"2025-06-09T11:31:35+05:00","caller":"awesomeProject2/main.go:69","message":"OK"}
+{"level":"debug","time":"2025-06-09T11:31:36+05:00","caller":"awesomeProject2/main.go:49","message":"Request","ip":"::1","method":"GET","path":"/test","query":"auth=Ivan"}
+{"level":"info","time":"2025-06-09T11:31:36+05:00","caller":"awesomeProject2/main.go:65","message":"Authorized"}
+{"level":"info","time":"2025-06-09T11:31:36+05:00","caller":"awesomeProject2/main.go:69","message":"OK"}
+{"level":"debug","time":"2025-06-09T11:31:55+05:00","caller":"awesomeProject2/main.go:49","message":"Request","ip":"::1","method":"GET","path":"/test","query":"auth=Ivanvc"}
+{"level":"warn","time":"2025-06-09T11:31:55+05:00","caller":"awesomeProject2/main.go:59","message":"Unauthorized"}
+2025-06-09T11:32:36+05:00	info	awesomeProject2/main.go:72	Starting server
+2025-06-09T11:32:55+05:00	debug	awesomeProject2/main.go:49	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivan"}
+2025-06-09T11:32:55+05:00	info	awesomeProject2/main.go:65	Authorized
+2025-06-09T11:32:55+05:00	info	awesomeProject2/main.go:69	OK
+2025-06-09T11:33:45+05:00	[34mINFO[0m	awesomeProject2/main.go:72	Starting server
+2025-06-09T11:33:48+05:00	[35mDEBUG[0m	awesomeProject2/main.go:49	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivan"}
+2025-06-09T11:33:48+05:00	[34mINFO[0m	awesomeProject2/main.go:65	Authorized
+2025-06-09T11:33:48+05:00	[34mINFO[0m	awesomeProject2/main.go:69	OK
+2025-06-09T11:36:31+05:00	INFO	awesomeProject2/main.go:72	Starting server
+2025-06-09T11:36:39+05:00	DEBUG	awesomeProject2/main.go:49	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivan"}
+2025-06-09T11:36:39+05:00	INFO	awesomeProject2/main.go:65	Authorized
+2025-06-09T11:36:39+05:00	INFO	awesomeProject2/main.go:69	OK
+2025-06-09T11:36:53+05:00	DEBUG	awesomeProject2/main.go:49	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivanff"}
+2025-06-09T11:36:53+05:00	WARN	awesomeProject2/main.go:59	Unauthorized
+2025-06-09T11:43:09+05:00	INFO	Starting server
+2025-06-09T11:43:15+05:00	DEBUG	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivanff"}
+2025-06-09T11:43:15+05:00	WARN	Unauthorized
+2025-06-09T11:43:48+05:00	DEBUG	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivanff"}
+2025-06-09T11:43:48+05:00	WARN	Unauthorized
+2025-06-09T11:44:00+05:00	DEBUG	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivan"}
+2025-06-09T11:44:00+05:00	INFO	Authorized
+2025-06-09T11:44:00+05:00	INFO	OK
