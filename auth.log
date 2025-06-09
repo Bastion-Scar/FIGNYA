@@ -30,3 +30,11 @@
 2025-06-09T11:44:00+05:00	DEBUG	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivan"}
 2025-06-09T11:44:00+05:00	INFO	Authorized
 2025-06-09T11:44:00+05:00	INFO	OK
+2025-06-09T11:55:06+05:00	INFO 	Starting server
+2025-06-09T11:55:08+05:00	DEBUG	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivanff"}
+2025-06-09T11:55:08+05:00	WARN	Unauthorized
+2025-06-09T11:55:10+05:00	DEBUG	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivanff"}
+2025-06-09T11:55:10+05:00	WARN	Unauthorized
+2025-06-09T11:55:29+05:00	DEBUG	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivan"}
+2025-06-09T11:55:29+05:00	INFO	Authorized
+2025-06-09T11:55:29+05:00	INFO	OK
