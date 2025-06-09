@@ -6,7 +6,6 @@ import (
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"net/http"
-	"os"
 )
 
 var logger *zap.Logger
@@ -15,7 +14,7 @@ func LoggerInit() {
 	cfg := zap.Config{
 		Encoding:         "console",
 		Level:            zap.NewAtomicLevelAt(zap.DebugLevel),
-		OutputPaths:      []string{"stdout", "auth.log"},
+		OutputPaths:      []string{"stdout"},
 		ErrorOutputPaths: []string{"stderr"},
 		EncoderConfig: zapcore.EncoderConfig{
 			TimeKey:        "time",
@@ -31,12 +30,7 @@ func LoggerInit() {
 			EncodeCaller:   zapcore.ShortCallerEncoder,
 		},
 	}
-	var err error
-	logger, err = cfg.Build()
-	if err != nil {
-		os.Stderr.WriteString("Failed to create logger" + err.Error() + "\n")
-		os.Exit(1)
-	}
+
 	lj := &lumberjack.Logger{
 		Filename:   "auth.log",
 		MaxSize:    500,
@@ -51,7 +45,7 @@ func LoggerInit() {
 		cfg.Level,
 	)
 
-	logger = zap.New(core)
+	logger = zap.New(core, zap.AddCaller())
 }
 
 func main() {
@@ -72,7 +66,7 @@ func main() {
 	r.GET("/test", func(c *gin.Context) {
 		query := c.Query("auth")
 		if query != "Ivan" {
-			logger.Warn("Unauthorized")
+			logger.Info("Unauthorized")
 			c.JSON(http.StatusUnauthorized, gin.H{
 				"code": http.StatusUnauthorized,
 			})

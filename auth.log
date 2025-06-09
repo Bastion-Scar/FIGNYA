@@ -38,3 +38,6 @@
 2025-06-09T11:55:29+05:00	DEBUG	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivan"}
 2025-06-09T11:55:29+05:00	INFO	Authorized
 2025-06-09T11:55:29+05:00	INFO	OK
+2025-06-09T12:03:57+05:00	DEBUG	Request	{"ip": "::1", "method": "GET", "path": "/test", "query": "auth=Ivan"}
+2025-06-09T12:03:57+05:00	INFO	Authorized
+2025-06-09T12:03:57+05:00	INFO	OK
